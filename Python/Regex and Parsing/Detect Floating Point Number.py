@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/introduction-to-regex/problem
+
 import re
 
 PATTERN_DECIMAL = re.compile(r'^[\+-]?\d*\.\d+$')
