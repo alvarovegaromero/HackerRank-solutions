@@ -1,4 +1,4 @@
-//Link: https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem
+//https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem
 
 class Result {
 
@@ -22,24 +22,20 @@ class Result {
 }
 
 
-    public static DoublyLinkedListNode reverse(DoublyLinkedListNode llist) {
-    // Write your code here
+public static DoublyLinkedListNode reverse(DoublyLinkedListNode llist) {    
+    DoublyLinkedListNode previous = null;
+    DoublyLinkedListNode next; 
+    DoublyLinkedListNode actual = llist;
     
-        //Variables used. Representing the actual, previous and next node used
-        DoublyLinkedListNode previous = null; //Initial parameter
-        DoublyLinkedListNode next; 
-        DoublyLinkedListNode actual = llist;
+    while(actual != null) {
+        next = actual.next; //Save the next
         
-        while(actual != null) //While it's not the end (or empty list)
-        {
-            next = actual.next; //Save the next
-            
-            actual.next = previous; //Switch the values
-            actual.prev = next;
-            
-            previous = actual; //Continue with the list
-            actual = next;            
-        }
+        actual.next = previous;
+        actual.prev = next;
         
-        return previous;
+        previous = actual; //Continue with the list
+        actual = next;            
     }
+    
+    return previous;
+}

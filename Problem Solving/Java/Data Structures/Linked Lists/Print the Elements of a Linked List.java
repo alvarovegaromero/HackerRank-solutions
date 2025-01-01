@@ -1,4 +1,4 @@
-//Link: https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem
+//https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem
 
 // Complete the printLinkedList function below.
 
@@ -11,13 +11,12 @@
      * }
      *
      */
+    
     static void printLinkedList(SinglyLinkedListNode head) {
         SinglyLinkedListNode current_node = head;
         
-        while(current_node != null)
-        {
+        while(current_node != null) {
             System.out.println(current_node.data);
             current_node = current_node.next;
         }
-
     }

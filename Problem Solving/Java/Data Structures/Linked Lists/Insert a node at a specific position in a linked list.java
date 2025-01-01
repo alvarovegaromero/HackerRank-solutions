@@ -1,4 +1,4 @@
-//Link: https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem
+//https://www.hackerrank.com/challenges/insert-a-node-at-a-specific-position-in-a-linked-list/problem
 
     /*
      * Complete the 'insertNodeAtPosition' function below.
@@ -23,14 +23,9 @@
     public static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist, int data, int position) {
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
         SinglyLinkedListNode previous_node = null;
-        SinglyLinkedListNode next_node = llist;
+        SinglyLinkedListNode next_node = llist;       
         
-        if(position == 0){ //New head
-            node.next = next_node;
-            return node;
-        }            
-        
-        for(int i = 0 ; i < position ; i++){
+        for(int i = 0; i < position; i++) {
             previous_node = next_node;
             next_node = next_node.next;
         }
