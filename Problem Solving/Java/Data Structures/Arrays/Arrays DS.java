@@ -1,4 +1,4 @@
-//Link:  https://www.hackerrank.com/challenges/arrays-ds/problem
+//https://www.hackerrank.com/challenges/arrays-ds/problem
 
 class Result {
 
@@ -9,12 +9,18 @@ class Result {
      * The function accepts INTEGER_ARRAY a as parameter.
      */
 
-    public static List<Integer> reverseArray(List<Integer> a) {
-        List<Integer> reverse = new ArrayList<>(a); //New list that is = to a
+public static List<Integer> reverseArray(List<Integer> a) {
+        //We could use: Collections.reverse(a);
         
-        Collections.reverse(reverse); //Use the operation for reversing a list
-    
-        return reverse;
+        Integer tmp, size;
+        size = a.size();
+        for(int i = 0 ; i < size/2 ; i++){
+            tmp = a.get(i);
+            a.set(i, a.get(size - i - 1));
+            a.set(size - i - 1, tmp);
+        }
+        
+        return a;
     }
 
 }
