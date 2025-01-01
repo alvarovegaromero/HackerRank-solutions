@@ -28,12 +28,12 @@ public static DoublyLinkedListNode reverse(DoublyLinkedListNode llist) {
     DoublyLinkedListNode actual = llist;
     
     while(actual != null) {
-        next = actual.next; //Save the next
+        next = actual.next;
         
         actual.next = previous;
         actual.prev = next;
         
-        previous = actual; //Continue with the list
+        previous = actual;
         actual = next;            
     }
     
