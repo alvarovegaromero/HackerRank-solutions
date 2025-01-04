@@ -12,7 +12,7 @@
      *
      */
 
-static boolean hasCycle(SinglyLinkedListNode head) {
+    static boolean hasCycle(SinglyLinkedListNode head) {
         Set<SinglyLinkedListNode> nodeVisited = new HashSet<>();
         SinglyLinkedListNode current = head;
         

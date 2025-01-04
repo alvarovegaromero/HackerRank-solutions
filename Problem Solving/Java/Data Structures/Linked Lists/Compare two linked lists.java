@@ -11,6 +11,7 @@
      * }
      *
      */
+    
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         
         while(head1 != null && head2 != null){
