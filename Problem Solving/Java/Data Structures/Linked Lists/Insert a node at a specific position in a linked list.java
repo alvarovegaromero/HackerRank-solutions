@@ -22,16 +22,16 @@
 
     public static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist, int data, int position) {
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
-        SinglyLinkedListNode previous_node = null;
-        SinglyLinkedListNode next_node = llist;       
+        SinglyLinkedListNode previous = null;
+        SinglyLinkedListNode next = llist;       
         
         for(int i = 0; i < position; i++) {
-            previous_node = next_node;
-            next_node = next_node.next;
+            previous = next;
+            next = next.next;
         }
             
-        previous_node.next = node;
-        node.next = next_node;
+        previous.next = node;
+        node.next = next;
 
         return llist;
     }
