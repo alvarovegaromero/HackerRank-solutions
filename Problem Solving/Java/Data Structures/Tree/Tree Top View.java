@@ -1,21 +1,4 @@
-//Link: https://www.hackerrank.com/challenges/tree-top-view/problem
-
-import java.util.*;
-import java.io.*;
-
-class Node {
-    Node left;
-    Node right;
-    int data;
-    
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
-
-class Solution {
+//https://www.hackerrank.com/challenges/tree-top-view/problem
 
     static class structNodeKey {
         Node node;
@@ -34,7 +17,6 @@ class Solution {
     	Node left;
     	Node right;
 	*/
-
     
 	public static void topView(Node root) {
     
@@ -42,31 +24,25 @@ class Solution {
         Map<Integer, Node> topViewMap = new TreeMap<Integer, Node>();
         structNodeKey tmp;
  
-        if (root == null) {
+        if (root == null)
             return;
-        }
-        else {
-            queue.add(new structNodeKey(root, 0)); //first value is 0
-        }
+        else 
+            queue.add(new structNodeKey(root, 0));
         
-        while(!queue.isEmpty())
-        {
+        while(!queue.isEmpty()) {
             tmp = queue.poll();
             
-            if(!topViewMap.containsKey(tmp.key)){
+            if(!topViewMap.containsKey(tmp.key))
                 topViewMap.put(tmp.key, tmp.node);
-            }
             
-            if(tmp.node.left != null){
+            if(tmp.node.left != null)
                 queue.add(new structNodeKey(tmp.node.left, tmp.key-1));    
-            }   
             
-            if(tmp.node.right != null){
+            if(tmp.node.right != null)
                 queue.add(new structNodeKey(tmp.node.right, tmp.key+1));                 
-            }
         }
         
-        for(Map.Entry<Integer, Node> entry : topViewMap.entrySet()){
+        for(Map.Entry<Integer, Node> entry : topViewMap.entrySet()) {
             System.out.print(entry.getValue().data+" ");
         }
     }

@@ -21,7 +21,6 @@ class Result {
      */
 }
 
-
 public static DoublyLinkedListNode reverse(DoublyLinkedListNode llist) {    
     DoublyLinkedListNode previous = null;
     DoublyLinkedListNode next; 

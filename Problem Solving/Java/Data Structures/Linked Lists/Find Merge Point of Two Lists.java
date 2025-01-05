@@ -12,7 +12,7 @@
      *
      */
 
-static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+    static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         Set<SinglyLinkedListNode> nodes1 = new HashSet<>();
         SinglyLinkedListNode current = head1;
         
